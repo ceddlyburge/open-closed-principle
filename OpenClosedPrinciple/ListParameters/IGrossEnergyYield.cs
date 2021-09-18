@@ -1,4 +1,4 @@
-﻿namespace OpenClosedPrinciple.Original
+﻿namespace OpenClosedPrinciple.ListParameters
 {
     public interface IGrossEnergyYield
     {

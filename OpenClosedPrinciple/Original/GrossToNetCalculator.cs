@@ -42,16 +42,6 @@ namespace OpenClosedPrinciple.Original
             GrossToNet = 1 - (1 - (dependentLoss + curtailmentLossGrid)) * (1 - independentLoss);
         }
 
-        private double CombinePercentages(object gridAvailability, double turbinePerformanceExperience, double turbineLossTurbulence, object environmentalPerformanceDegradationIcing, object curtailmentPowerPurchase, object subOptimalPerformance, double turbineLossShear, double operationalExperienceLoss)
-        {
-            throw new NotImplementedException();
-        }
-
-        private double CombinePercentages(object turbineAvailability, object balanceAvailability, object accessibilityAvailability, double hysteresisLoss, double electricalLoss, object environmentalShutdownWeather, object environmentalSiteAccess, object environmentTreeGrowth)
-        {
-            throw new NotImplementedException();
-        }
-
         double CombinePercentages(params double[] percentages)
         {
             double combination = 1;
