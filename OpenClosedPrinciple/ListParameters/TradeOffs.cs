@@ -43,7 +43,9 @@ namespace OpenClosedPrinciple.ListParameters
                 operationalExperienceLoss
             };
 
-            var grossToNet = new GrossToNetCalculator(dependentLosses, independentLosses, curtailmentLossGrid).GrossToNet;
+            var grossToNet =
+                new GrossToNetCalculator(dependentLosses, independentLosses, curtailmentLossGrid)
+                .GrossToNet;
         }
     }
 }

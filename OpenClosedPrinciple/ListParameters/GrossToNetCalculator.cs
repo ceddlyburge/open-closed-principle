@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace OpenClosedPrinciple.ListParameters
@@ -9,14 +10,14 @@ namespace OpenClosedPrinciple.ListParameters
         public GrossToNetCalculator(
             IReadOnlyList<double> dependentLosses, 
             IReadOnlyList<double> independentLosses,
-            double curtailmenLossGrid
+            double curtailmentLossGrid
             )
         {
             double dependentLoss =
                 CombinePercentages(dependentLosses.ToArray());
 
             double independentLoss =
-                CombinePercentages(independentLosses);
+                CombinePercentages(independentLosses.ToArray());
 
             GrossToNet = 1 - (1 - (dependentLoss + curtailmentLossGrid)) * (1 - independentLoss);
         }
